@@ -13,8 +13,9 @@ public interface MessageRepository extends JpaRepository<Message, Long> {
 
     /**
      * Метод для поиска сообщений по адресу электронной почты пользователя.
+     *
      * @param userEmail адрес электронной почты пользователя
-     * @param pageable параметры страницы
+     * @param pageable  параметры страницы
      * @return страница сообщений
      */
     Page<Message> findByUserEmail(
@@ -23,7 +24,8 @@ public interface MessageRepository extends JpaRepository<Message, Long> {
 
     /**
      * Метод для поиска сообщений по признаку закрытости.
-     * @param closed признак закрытости сообщений
+     *
+     * @param closed   признак закрытости сообщений
      * @param pageable параметры страницы
      * @return страница сообщений
      */

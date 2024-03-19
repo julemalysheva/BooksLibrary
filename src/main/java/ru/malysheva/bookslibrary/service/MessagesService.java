@@ -21,6 +21,7 @@ public class MessagesService {
     /**
      * Конструктор для создания экземпляра сервиса сообщений.
      * Осуществляет внедрение зависимости от репозитория сообщений.
+     *
      * @param messageRepository репозиторий сообщений
      */
     public MessagesService(MessageRepository messageRepository) {
@@ -29,8 +30,9 @@ public class MessagesService {
 
     /**
      * Метод для создания нового сообщения в системе.
+     *
      * @param messageRequest запрос на создание сообщения
-     * @param userEmail адрес электронной почты пользователя, создавшего сообщение
+     * @param userEmail      адрес электронной почты пользователя, создавшего сообщение
      */
     public void postMessage(Message messageRequest, String userEmail) {
         Message message = new Message(
@@ -42,8 +44,9 @@ public class MessagesService {
 
     /**
      * Метод для обновления сообщения администратором.
+     *
      * @param adminQuestionRequest запрос на обновление сообщения администратором
-     * @param userEmail адрес электронной почты администратора
+     * @param userEmail            адрес электронной почты администратора
      * @throws Exception если сообщение не найдено
      */
     public void putMessage(

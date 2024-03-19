@@ -29,8 +29,9 @@ public class ProductService {
     /**
      * Конструктор для создания экземпляра сервиса товаров.
      * Осуществляет внедрение зависимостей от репозиториев товаров, заказов и истории.
+     *
      * @param productRepository репозиторий товаров
-     * @param orderRepository репозиторий заказов
+     * @param orderRepository   репозиторий заказов
      * @param historyRepository репозиторий истории
      */
     public ProductService(
@@ -44,12 +45,13 @@ public class ProductService {
 
     /**
      * Метод для оформления заказа на товар пользователем.
+     *
      * @param userEmail адрес электронной почты пользователя
      * @param productId идентификатор товара
      * @return заказанный товар
      * @throws Exception если товар не найден, товар уже заказан или нет доступных копий товара
      */
-    public Product orderProduct(String userEmail, Long productId) 
+    public Product orderProduct(String userEmail, Long productId)
         throws Exception {
       Optional<Product> product = productRepository.findById(productId);
 
@@ -78,6 +80,7 @@ public class ProductService {
 
     /**
      * Метод для проверки, заказал ли пользователь товар.
+     *
      * @param userEmail адрес электронной почты пользователя
      * @param productId идентификатор товара
      * @return true, если пользователь уже заказал товар, иначе - false
@@ -90,6 +93,7 @@ public class ProductService {
 
     /**
      * Метод для получения текущего количества заказанных товаров пользователем.
+     *
      * @param userEmail адрес электронной почты пользователя
      * @return текущее количество заказанных товаров
      */
@@ -99,6 +103,7 @@ public class ProductService {
 
     /**
      * Метод для получения списка текущих товаров на полке пользователя.
+     *
      * @param userEmail адрес электронной почты пользователя
      * @return список товаров на полке пользователя
      * @throws Exception если товар или заказ не найдены
@@ -139,6 +144,7 @@ public class ProductService {
 
     /**
      * Метод для получения текущего количества товаров на полке пользователя.
+     *
      * @param userEmail адрес электронной почты пользователя
      * @return текущее количество товаров на полке пользователя
      */
@@ -148,9 +154,10 @@ public class ProductService {
 
     /**
      * Метод для возврата товара пользователем
-     *  @param userEmail адрес электронной почты пользователя
-     *  @param productId идентификатор возвращаемого товара
-     *  @throws Exception если товар или заказ не найдены
+     *
+     * @param userEmail адрес электронной почты пользователя
+     * @param productId идентификатор возвращаемого товара
+     * @throws Exception если товар или заказ не найдены
      */
     public void returnProduct(String userEmail, Long productId) throws Exception {
 
@@ -183,6 +190,7 @@ public class ProductService {
 
     /**
      * Метод для продления аренды товара пользователем.
+     *
      * @param userEmail адрес электронной почты пользователя
      * @param productId идентификатор товара
      * @throws Exception если операция невозможна

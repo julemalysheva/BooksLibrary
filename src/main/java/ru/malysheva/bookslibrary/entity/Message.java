@@ -20,7 +20,8 @@ public class Message {
 
     /**
      * Конструктор с параметрами.
-     * @param title Заголовок сообщения.
+     *
+     * @param title    Заголовок сообщения.
      * @param userText Текст сообщения от пользователя.
      */
     public Message(String title, String userText) {

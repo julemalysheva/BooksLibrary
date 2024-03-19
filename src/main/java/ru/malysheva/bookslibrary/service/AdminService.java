@@ -24,9 +24,10 @@ public class AdminService {
     /**
      * Конструктор для создания экземпляра сервиса администратора.
      * Осуществляет внедрение зависимостей репозиториев продуктов, отзывов и заказов.
+     *
      * @param productRepository репозиторий продуктов
-     * @param reviewRepository репозиторий отзывов
-     * @param orderRepository репозиторий заказов
+     * @param reviewRepository  репозиторий отзывов
+     * @param orderRepository   репозиторий заказов
      */
     public AdminService(
             ProductRepository productRepository,
@@ -39,6 +40,7 @@ public class AdminService {
 
     /**
      * Метод для добавления нового продукта в базу данных.
+     *
      * @param product данные о продукте для добавления
      */
     public void postProduct(AppendProductRequest product) {
@@ -55,6 +57,7 @@ public class AdminService {
 
     /**
      * Метод для удаления продукта из базы данных.
+     *
      * @param productId идентификатор продукта для удаления
      * @throws Exception если продукт не найден
      */
@@ -72,6 +75,7 @@ public class AdminService {
 
     /**
      * Метод для увеличения количества доступных копий продукта.
+     *
      * @param productId идентификатор продукта
      * @throws Exception если продукт не найден
      */
@@ -89,6 +93,7 @@ public class AdminService {
 
     /**
      * Метод для уменьшения количества доступных копий продукта.
+     *
      * @param productId идентификатор продукта
      * @throws Exception если продукт не найден или количество копий равно нулю
      */

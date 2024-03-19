@@ -14,14 +14,14 @@ import org.springframework.web.accept.HeaderContentNegotiationStrategy;
 @Configuration
 public class SecurityConfiguration {
 
-  /**
-   * Создает цепочку фильтров безопасности для HTTP-запросов.
-   *
-   * @param http объект конфигурации HTTP-безопасности
-   * @return цепочка фильтров безопасности
-   * @throws Exception если возникает ошибка при создании цепочки фильтров
-   */
-  @Bean
+    /**
+     * Создает цепочку фильтров безопасности для HTTP-запросов.
+     *
+     * @param http объект конфигурации HTTP-безопасности
+     * @return цепочка фильтров безопасности
+     * @throws Exception если возникает ошибка при создании цепочки фильтров
+     */
+    @Bean
   public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 
     http.csrf().disable();

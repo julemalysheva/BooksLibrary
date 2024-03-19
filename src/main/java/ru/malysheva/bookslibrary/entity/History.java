@@ -14,13 +14,14 @@ public class History {
 
     /**
      * Конструктор с параметрами.
-     * @param userEmail Email пользователя.
-     * @param orderDate Дата заказа.
+     *
+     * @param userEmail    Email пользователя.
+     * @param orderDate    Дата заказа.
      * @param returnedDate Дата возврата.
-     * @param title Название продукта.
-     * @param creator Автор продукта.
-     * @param description Описание продукта.
-     * @param img Путь к изображению продукта.
+     * @param title        Название продукта.
+     * @param creator      Автор продукта.
+     * @param description  Описание продукта.
+     * @param img          Путь к изображению продукта.
      */
     public History(
             String userEmail, 

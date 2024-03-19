@@ -12,7 +12,8 @@ import ru.malysheva.bookslibrary.entity.History;
 public interface HistoryRepository extends JpaRepository<History, Long> {
     /**
      * Метод для поиска истории заказов по адресу электронной почты пользователя.
-     * @param email адрес электронной почты пользователя
+     *
+     * @param email    адрес электронной почты пользователя
      * @param pageable параметры страницы
      * @return страница истории заказов
      */

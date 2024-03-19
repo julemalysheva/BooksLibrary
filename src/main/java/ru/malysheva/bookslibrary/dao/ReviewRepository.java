@@ -14,27 +14,30 @@ import ru.malysheva.bookslibrary.entity.Review;
  */
 public interface ReviewRepository extends JpaRepository<Review, Long> {
 
-  /**
-   * Метод для поиска отзывов по идентификатору продукта.
-   * @param productId идентификатор продукта
-   * @param pageable объект для пагинации результатов
-   * @return страница отзывов, относящихся к продукту
-   */
-  Page<Review> findByProductId(@RequestParam("productId") Long productId, Pageable pageable);
+    /**
+     * Метод для поиска отзывов по идентификатору продукта.
+     *
+     * @param productId идентификатор продукта
+     * @param pageable  объект для пагинации результатов
+     * @return страница отзывов, относящихся к продукту
+     */
+    Page<Review> findByProductId(@RequestParam("productId") Long productId, Pageable pageable);
 
-  /**
-   * Метод для поиска отзыва пользователя по идентификатору продукта.
-   * @param userEmail электронная почта пользователя
-   * @param productId идентификатор продукта
-   * @return отзыв пользователя о продукте
-   */
-  Review findByUserEmailAndProductId(String userEmail, Long productId);
+    /**
+     * Метод для поиска отзыва пользователя по идентификатору продукта.
+     *
+     * @param userEmail электронная почта пользователя
+     * @param productId идентификатор продукта
+     * @return отзыв пользователя о продукте
+     */
+    Review findByUserEmailAndProductId(String userEmail, Long productId);
 
-  /**
-   * Метод для удаления всех отзывов по идентификатору продукта.
-   * @param productId идентификатор продукта
-   */
-  @Modifying
+    /**
+     * Метод для удаления всех отзывов по идентификатору продукта.
+     *
+     * @param productId идентификатор продукта
+     */
+    @Modifying
   @Query("delete from Review where product_id in :product_id")
   void deleteAllByProductId(@Param("product_id") Long productId);
 }

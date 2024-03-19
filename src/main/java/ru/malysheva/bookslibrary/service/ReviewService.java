@@ -20,6 +20,7 @@ public class ReviewService {
 
     /**
      * Конструктор класса ReviewService.
+     *
      * @param reviewRepository репозиторий для работы с отзывами
      */
     public ReviewService(ReviewRepository reviewRepository) {
@@ -28,7 +29,8 @@ public class ReviewService {
 
     /**
      * Метод для добавления отзыва.
-     * @param userEmail адрес электронной почты пользователя
+     *
+     * @param userEmail     адрес электронной почты пользователя
      * @param reviewRequest модель запроса отзыва
      * @throws Exception если отзыв уже существует
      */
@@ -59,6 +61,7 @@ public class ReviewService {
 
     /**
      * Метод для проверки наличия отзыва пользователя о товаре.
+     *
      * @param userEmail адрес электронной почты пользователя
      * @param productId идентификатор товара
      * @return true, если отзыв существует, иначе false

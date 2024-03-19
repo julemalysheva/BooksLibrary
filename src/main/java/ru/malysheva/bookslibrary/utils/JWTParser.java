@@ -11,6 +11,7 @@ public class JWTParser {
 
     /**
      * Метод для извлечения электронной почты из JWT-токена.
+     *
      * @param token JWT-токен
      * @return электронная почта пользователя
      */
@@ -23,6 +24,7 @@ public class JWTParser {
 
     /**
      * Метод для извлечения роли пользователя из JWT-токена.
+     *
      * @param token JWT-токен
      * @return роль пользователя
      */
@@ -35,8 +37,9 @@ public class JWTParser {
 
     /**
      * Вспомогательный метод для извлечения данных из JWT-токена.
+     *
      * @param token JWT-токен
-     * @param tag тег данных, которые нужно извлечь
+     * @param tag   тег данных, которые нужно извлечь
      * @return извлеченные данные
      */
     public static String jwtExtraction(String token, String tag) {

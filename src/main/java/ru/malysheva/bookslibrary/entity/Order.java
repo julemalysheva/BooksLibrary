@@ -20,10 +20,11 @@ public class Order {
 
     /**
      * Конструктор с параметрами.
-     * @param userEmail Email пользователя.
-     * @param orderDate Дата заказа.
+     *
+     * @param userEmail  Email пользователя.
+     * @param orderDate  Дата заказа.
      * @param returnDate Дата возврата заказа.
-     * @param productId Идентификатор продукта.
+     * @param productId  Идентификатор продукта.
      */
     public Order(
         String userEmail,
